@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500&display=swap');
+* {
+    font-family:'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    background-color: #18181b;
+}
+
+#container { 
+    display: flex;
+    align-items: center;
+    gap: 3.5rem;
+}
+
+/* Color #f8fafc  262626 */
+
+
+#image img{ 
+    width: 80%;
+}
+
+#calculator {
+    color:#f8fafc;
+    background-color:#262626;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+    border-radius: 20px;
+}
+
+#form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+}
+
+form h1 {
+    font-size: 2.5rem;
+    position: relative;
+}
+
+form h1::after {
+    position: absolute;
+    content: '';
+    background-color: #F50057;
+    width: 8rem;
+    height: 3px;
+    border-radius: 3px;
+    margin-top: 16%;
+    left: 0;
+}
+
+#weight-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#input-weight {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    background-color: #474747;;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+input::-webkit-inner-spin-button, ::-webkit-outer-spin-button {
+    appearance: none;
+}
+
+#weight {
+    background-color: transparent;
+    outline: none;
+    border: none;
+    color: #f8fafc;
+    font-size: 15px;
+    width: 100%;
+}
+
+#height-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+}
+
+#input-height {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    background-color: #474747;;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#height {
+    background-color: transparent;
+    outline: none;
+    border: none;
+    color: #f8fafc;
+    font-size: 15px;
+    width: 100%;
+}
+
+button {
+    padding: 8px;
+    background-color: #F50057;
+    color: #f8fafc;
+    font-size: 16px;
+    letter-spacing: 1px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color .5s ease;
+    &:hover {
+        background-color: #ff0040;;
+    }
+}
+
+#result {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    border-top: 1px solid #474747;
+    padding: 0.75rem 0;
+}
+
+#bmi {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-size: 2.5rem;
+}
+
+#bmi span:last-child {
+    font-size: 0.875rem;
+    color: #f8fafc;
+} 
+
+#description {
+    width: 15.5rem;
+}
+
+#more-infos {
+    border-top: 1px solid #474747;
+    padding-top: 1.5rem;
+}
+
+#more-infos a{
+    color: #F50057;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: .875rem;
+    text-decoration: none;
+    letter-spacing: 1px;
+    transition: color .5s ease;
+    &:hover {
+        color: #ff4d8b;;
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+.attention {
+    color: #ff0040;
+}
+
+.regular {
+    color: rgb(8, 235, 103);
+}
+
+@media screen and (max-width: 1024px){
+    #image {
+        display: none;
+    }
+    
+}
+
+@media screen and (max-width: 500px) {
+    #container {
+        width: 100%;
+        height: 100%;
+    }
+
+    #calculator {
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+        justify-content: center;
+    }
+    
+    #form h1 {
+        font-size: 38px;
+    }
+}
